@@ -1,0 +1,26 @@
+﻿@page "/calculator"
+
+@using terfogat_felszin_teglalap.Client.ViewModels.BaseClass;
+
+<h3>Téglalap Felszín és Térfogat Számító</h3>
+
+<div class="form-group">
+    <label for="length">Hosszúság:</label>
+    <input type="number" class="form-control" id="length" @bind="ViewModel.Length" />
+</div>
+<div class="form-group">
+    <label for="width">Szélesség:</label>
+    <input type="number" class="form-control" id="width" @bind="ViewModel.Width" />
+</div>
+
+<div class="result">
+    Felszín: @ViewModel.SurfaceArea
+</div>
+
+<div class="result">
+    Térfogat: @ViewModel.Volume
+</div>
+
+@code {
+    private RectangleViewModel ViewModel { get; } = new RectangleViewModel();
+}

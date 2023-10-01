@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\terfogat_felszin_teglalap.Server.props" />
+</Project>
